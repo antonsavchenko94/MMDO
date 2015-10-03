@@ -1,2 +1,2 @@
 # MMDO
-for test
+Help with MMDO for my friends))
