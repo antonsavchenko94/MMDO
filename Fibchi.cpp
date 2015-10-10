@@ -37,7 +37,7 @@ int main(void)
 	fv=pow(v,4.0)+(4*pow(v,3.0))-(3*v*v)-(36*v)+45;
 
 	//u=a+(((3-sqrt(5.0))/2)*(b-a));
-do
+for (i=1;i<=n;i++)
 	{
 		if (fu<=fv){
 			b=v;
@@ -53,15 +53,15 @@ do
 			v=a+b-u;
 			fv=pow(v,4.0)+(4*pow(v,3.0))-(3*v*v)-(36*v)+45;
 		}
-		k++;
-		if (u>=v && k<n ){
-			u=a+((fibonachi(n-k+1)/fibonachi(n-k+3))*(b-a));  //back to this step, have problem
+	
+		if (u>v ){
+			u=a+((fibonachi(n-i+1)/fibonachi(n-i+3))*(b-a));  //back to this step, have problem
 			v=a+b-u;
 			fu=pow(u,4.0)+(4*pow(u,3.0))-(3*u*u)-(36*u)+45;
 			fv=pow(v,4.0)+(4*pow(v,3.0))-(3*v*v)-(36*v)+45;
 		}
 	}
-while (k!=n);
+
 	xx=(a+b)/2;
 	fx=pow(xx,4.0)+(4*pow(xx,3.0))-(3*xx*xx)-(36*xx)+45;
 	
