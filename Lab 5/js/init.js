@@ -2,6 +2,7 @@ var a = -3.0;
 var b = 3.0;
 var epsilon = 0.0001;
 
+
 function point(x1, x2, L) {
     return 0.5 * (x1 + x2 + (f(x1) - f(x2)) / L);
 }

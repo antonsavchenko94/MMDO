@@ -8,8 +8,83 @@
     <script src="js/evenBusting.js"></script>
     <script src="js/evenBusting_v2.js"></script>
     <script src="js/bruteForce.js"></script>
+    <script src="js/draw.js"></script>
 </head>
-<body>
-
+<body onload="draw()">
+<!--<canvas id="canvas" width="1300" height="500"></canvas>-->
+<input type="text">
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg .tg-baqh{text-align:center;vertical-align:top}
+    .tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg" align="center">
+    <tr>
+        <th class="tg-yw4l" rowspan="2">№</th>
+        <th class="tg-baqh" rowspan="2">Назва методу</th>
+        <th class="tg-yw4l" colspan="4">E = 10^-2</th>
+        <th class="tg-yw4l" colspan="4">E = 10^-4</th>
+    </tr>
+    <tr>
+        <td class="tg-yw4l">Nk</td>
+        <td class="tg-yw4l">Nf</td>
+        <td class="tg-yw4l">x*</td>
+        <td class="tg-yw4l">f*</td>
+        <td class="tg-yw4l">Nk</td>
+        <td class="tg-yw4l">Nf</td>
+        <td class="tg-yw4l">x*</td>
+        <td class="tg-yw4l">f*</td>
+    </tr>
+    <tr>
+        <td class="tg-yw4l">1</td>
+        <td class="tg-yw4l">Рівномірний перебір</td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+    </tr>
+    <tr>
+        <td class="tg-yw4l">2</td>
+        <td class="tg-yw4l">Послідовний перебір</td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+    </tr>
+    <tr>
+        <td class="tg-yw4l">3</td>
+        <td class="tg-yw4l">Піявського(кусково-лінійна міноранта)</td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+    </tr>
+    <tr>
+        <td class="tg-yw4l">4</td>
+        <td class="tg-yw4l">Піявського(параболічна міноранта)</td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+        <td class="tg-yw4l"></td>
+    </tr>
+</table>
 </body>
 </html>
