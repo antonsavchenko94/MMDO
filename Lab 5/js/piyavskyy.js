@@ -1,6 +1,6 @@
 var PIYAVSKYY_TYPE = {
-    PARABOL: "параболічна міноранта",
-    LINE: "кусково-лінійна міноранта"
+    PARABOL: "Піявського параболічна міноранта",
+    LINE: " Піявського кусково-лінійна міноранта"
 };
 
 function Piyavskyy(type) {
@@ -10,6 +10,7 @@ function Piyavskyy(type) {
     var countX = 2;
     var p = 0;
     var g = 0;
+    var iteration = 0;
     if (PIYAVSKYY_TYPE.LINE == type) {
         p = [point(x[0], x[1], L)];
         g = [g_f(p[0], x[0], L)];
@@ -22,6 +23,7 @@ function Piyavskyy(type) {
 
     var min = 0;
     do {
+        iteration++;
         min = g[0];
         var minI = 0;
         for (var j = 1; j < g.length; j++) {
@@ -32,6 +34,7 @@ function Piyavskyy(type) {
         }
         var i = 0;
         while (x[i] < p[minI]) {
+            iteration++;
             i++;
         }
         x.splice(i, 0, p[minI]);
@@ -41,7 +44,14 @@ function Piyavskyy(type) {
         g.push(g_f(p[countX - 1], x[i], L));
         countX++;
     } while (f(x[i]) - min > epsilon);
-    console.log("x = " + x[i].toFixed(4));
-    console.log("f(x) = " + f(x[i]).toFixed(4));
-    console.log("Кількість обрахунків F = "+ f.called);
+    if(epsilon==0.01){
+        if(PIYAVSKYY_TYPE.LINE==type)return {num:3, name:type,itr: iteration,Nf: f.called ,x:x[i], f:f(x[i])};
+        else return {num:4, name:type,itr: iteration,Nf: f.called ,x:x[i], f:f(x[i])};
+    }else if(epsilon==0.0001){
+        return {itr: iteration,Nf: f.called ,x:x[i], f:f(x[i])};
+    }
+
+    //console.log("x = " + x[i]);
+    //console.log("f(x) = " + f(x[i]));
+    //console.log("Кількість обрахунків F = "+ f.called);
 }
